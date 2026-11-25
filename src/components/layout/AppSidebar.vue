@@ -115,9 +115,12 @@ async function signOut() {
   z-index: 1;
   width: var(--sidebar-width);
   flex: 0 0 var(--sidebar-width);
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
   padding: 24px 16px 14px;
   border-right: 1px solid rgb(236 231 247 / 60%);
   background: var(--bg-sidebar);
