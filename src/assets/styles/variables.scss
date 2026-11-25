@@ -1,21 +1,41 @@
 :root {
   color-scheme: light;
-  --bg-primary: #f7f8fa;
-  --bg-sidebar: #fff;
-  --bg-card: #fff;
-  --bg-subtle: #f1f3f6;
-  --text-primary: #20242c;
-  --text-secondary: #777f8c;
-  --text-tertiary: #a0a6b0;
-  --border-color: #e8eaee;
-  --primary-color: #4263eb;
-  --primary-soft: #edf0ff;
-  --success-color: #16a36a;
-  --warning-color: #e5a000;
-  --danger-color: #e5484d;
-  --radius-card: 10px;
-  --radius-button: 7px;
-  --sidebar-width: 232px;
-  --header-height: 60px;
-  --shadow-card: 0 1px 2px rgb(32 36 44 / 3%), 0 6px 18px rgb(32 36 44 / 2%);
+  --app-background: #fbf9ff;
+  --app-surface: #ffffff;
+  --app-foreground: #2b2540;
+  --app-muted-foreground: #7d7794;
+  --app-border: #ece7f7;
+  --app-primary-color: #8b6df0;
+  --app-primary-foreground: #ffffff;
+  --app-secondary: #f4f0ff;
+  --app-secondary-foreground: #5f5880;
+  --app-ring: #a78bfa;
+
+  --bg-primary: var(--app-background);
+  --bg-sidebar: rgb(255 255 255 / 74%);
+  --bg-card: var(--app-surface);
+  --bg-subtle: #f5f2fc;
+  --text-primary: var(--app-foreground);
+  --text-secondary: var(--app-muted-foreground);
+  --text-tertiary: #a49db9;
+  --border-color: var(--app-border);
+  --primary-color: var(--app-primary-color);
+  --primary-soft: #f0eaff;
+  --success-color: #48bfa4;
+  --warning-color: #eaa66d;
+  --danger-color: #e8819c;
+
+  --radius-card: 24px;
+  --radius-button: 12px;
+  --sidebar-width: 268px;
+  --header-height: 64px;
+  --shadow-card:
+    0 1px 0 rgb(255 255 255 / 88%) inset, 0 18px 40px -28px rgb(124 92 214 / 35%),
+    0 2px 10px -6px rgb(124 92 214 / 12%);
+  --shadow-float: 0 16px 32px -26px rgb(107 78 200 / 70%);
+  --canvas-background:
+    radial-gradient(60% 45% at 8% 2%, #fbe9f8 0%, rgb(251 233 248 / 0%) 70%),
+    radial-gradient(55% 45% at 96% 0%, #e3f0ff 0%, rgb(227 240 255 / 0%) 72%),
+    radial-gradient(45% 40% at 60% 100%, #fff0e4 0%, rgb(255 240 228 / 0%) 70%),
+    linear-gradient(180deg, #fbf9ff 0%, #f7f7ff 100%);
 }

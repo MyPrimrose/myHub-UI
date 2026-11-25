@@ -14,6 +14,8 @@ import {
 } from 'lucide-vue-next'
 import { RouterLink } from 'vue-router'
 import AppCard from '@/components/common/AppCard.vue'
+import dashboardBanner from '@/assets/images/dashboard-banner.webp'
+import HabitTrackerCard from './components/HabitTrackerCard.vue'
 
 dayjs.locale('zh-cn')
 const today = dayjs()
@@ -38,6 +40,22 @@ const recent = [
         <p>{{ dateLabel }} <span class="dot">·</span> 把注意力留给重要的事</p>
       </div>
       <div class="demo-note">静态演示数据</div>
+    </section>
+
+    <section class="top-grid">
+      <div class="hero-card">
+        <img :src="dashboardBanner" alt="柔和黏土风格的个人工作台插画" />
+        <div class="hero-wash"></div>
+        <div class="hero-copy">
+          <span class="hero-chip"><Sparkles :size="13" /> 今日概览</span>
+          <h2>今天适合专注<br /><em>一件重要的事</em></h2>
+          <p>{{ dateLabel }} · 给计划留出呼吸的空间。</p>
+        </div>
+        <div class="hero-foot">
+          <span>今日重点</span><strong>整理项目第一阶段的工作清单</strong><i>静态演示</i>
+        </div>
+      </div>
+      <HabitTrackerCard />
     </section>
 
     <section class="overview-grid">
@@ -152,6 +170,109 @@ const recent = [
 .dashboard {
   display: grid;
   gap: 22px;
+}
+.top-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.65fr) minmax(350px, 1fr);
+  align-items: stretch;
+  gap: 18px;
+}
+.hero-card {
+  position: relative;
+  min-height: 300px;
+  overflow: hidden;
+  border: 1px solid rgb(255 255 255 / 80%);
+  border-radius: 30px;
+  background: linear-gradient(120deg, #f1eaff, #e7f4ff 58%, #f8e7f5);
+  box-shadow: var(--shadow-card);
+}
+.hero-card > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 56%;
+}
+.hero-wash {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    95deg,
+    rgb(255 255 255 / 94%) 0%,
+    rgb(255 255 255 / 80%) 38%,
+    rgb(255 255 255 / 20%) 68%,
+    transparent 100%
+  );
+}
+.hero-copy {
+  position: relative;
+  z-index: 1;
+  max-width: 460px;
+  padding: 27px 30px 76px;
+}
+.hero-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  border: 1px solid rgb(255 255 255 / 88%);
+  border-radius: 999px;
+  color: #8063dc;
+  background: rgb(255 255 255 / 82%);
+  box-shadow: 0 8px 18px -15px rgb(52 38 102 / 55%);
+  font-size: 10px;
+  font-weight: 600;
+}
+.hero-copy h2 {
+  margin: 15px 0 0;
+  color: #241f38;
+  font-size: clamp(22px, 2.4vw, 29px);
+  font-weight: 680;
+  letter-spacing: -0.04em;
+  line-height: 1.3;
+}
+.hero-copy h2 em {
+  color: #8063dc;
+  font-style: normal;
+}
+.hero-copy p {
+  margin: 8px 0 0;
+  color: #6b6485;
+  font-size: 11px;
+}
+.hero-foot {
+  position: absolute;
+  z-index: 1;
+  right: 18px;
+  bottom: 16px;
+  left: 18px;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 13px;
+  border: 1px solid rgb(255 255 255 / 76%);
+  border-radius: 16px;
+  color: #6b6485;
+  background: rgb(255 255 255 / 76%);
+  backdrop-filter: blur(12px);
+  font-size: 10px;
+}
+.hero-foot strong {
+  overflow: hidden;
+  color: #3a3355;
+  font-size: 11px;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.hero-foot i {
+  margin-left: auto;
+  color: #a49db9;
+  font-size: 9px;
+  font-style: normal;
+  white-space: nowrap;
 }
 .welcome {
   display: flex;
@@ -475,6 +596,12 @@ h2 {
   color: var(--text-secondary);
 }
 @media (max-width: 900px) {
+  .top-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-card {
+    min-height: 280px;
+  }
   .overview-grid,
   .content-grid {
     grid-template-columns: 1fr;
@@ -484,6 +611,27 @@ h2 {
   }
 }
 @media (max-width: 580px) {
+  .top-grid {
+    gap: 14px;
+  }
+  .hero-card {
+    min-height: 220px;
+    border-radius: 24px;
+  }
+  .hero-card > img {
+    object-position: 62% center;
+  }
+  .hero-copy {
+    padding: 21px 20px 76px;
+  }
+  .hero-wash {
+    background: linear-gradient(
+      90deg,
+      rgb(255 255 255 / 94%),
+      rgb(255 255 255 / 55%) 68%,
+      rgb(255 255 255 / 14%)
+    );
+  }
   .welcome {
     align-items: flex-start;
     gap: 12px;

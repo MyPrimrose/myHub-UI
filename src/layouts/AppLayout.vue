@@ -18,7 +18,7 @@ import AppSidebar from '@/components/layout/AppSidebar.vue'
 .app-layout {
   min-height: 100vh;
   display: flex;
-  background: var(--bg-primary);
+  background: var(--canvas-background);
 }
 .main-column {
   min-width: 0;
@@ -28,10 +28,10 @@ import AppSidebar from '@/components/layout/AppSidebar.vue'
 }
 .main-content {
   width: 100%;
-  max-width: 1500px;
+  max-width: 1400px;
   flex: 1;
   margin: 0 auto;
-  padding: 30px 34px 48px;
+  padding: 24px 34px 48px;
 }
 @media (max-width: 700px) {
   .main-content {

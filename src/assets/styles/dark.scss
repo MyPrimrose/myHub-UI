@@ -1,17 +1,24 @@
 :root[data-theme='dark'] {
   color-scheme: dark;
-  --bg-primary: #15171b;
-  --bg-sidebar: #191c21;
-  --bg-card: #20242a;
-  --bg-subtle: #272c33;
-  --text-primary: #e9ebef;
-  --text-secondary: #969eaa;
-  --text-tertiary: #727b88;
-  --border-color: #30353d;
-  --primary-color: #7792ff;
-  --primary-soft: #262f4d;
-  --success-color: #45c68d;
-  --warning-color: #f2bc50;
-  --danger-color: #ff686d;
-  --shadow-card: 0 1px 3px rgb(0 0 0 / 16%);
+  --app-background: #211e2d;
+  --app-surface: #2d293b;
+  --app-foreground: #f2eefb;
+  --app-muted-foreground: #b0a9c3;
+  --app-border: #423b55;
+  --app-primary-color: #b29aff;
+  --app-secondary: #39334b;
+  --app-secondary-foreground: #d0c7e4;
+  --bg-sidebar: rgb(39 35 53 / 88%);
+  --bg-subtle: #373247;
+  --text-tertiary: #9188a8;
+  --primary-soft: #40365f;
+  --success-color: #70d0b8;
+  --warning-color: #f1b681;
+  --danger-color: #ef9ab1;
+  --shadow-card: 0 1px 0 rgb(255 255 255 / 4%) inset, 0 18px 40px -28px rgb(0 0 0 / 55%);
+  --shadow-float: 0 16px 32px -26px rgb(0 0 0 / 65%);
+  --canvas-background:
+    radial-gradient(60% 45% at 8% 2%, rgb(130 85 139 / 16%) 0%, transparent 70%),
+    radial-gradient(55% 45% at 96% 0%, rgb(70 117 157 / 16%) 0%, transparent 72%),
+    linear-gradient(180deg, #211e2d 0%, #252235 100%);
 }

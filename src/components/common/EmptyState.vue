@@ -18,25 +18,30 @@ withDefaults(defineProps<{ title: string; description?: string }>(), {
   display: grid;
   align-content: center;
   justify-items: center;
-  gap: 8px;
+  gap: 10px;
+  padding: 30px 18px;
   color: var(--text-secondary);
   text-align: center;
 }
 .icon {
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
-  border-radius: 12px;
-  background: var(--bg-subtle);
-  color: var(--primary-color);
+  width: 48px;
+  height: 48px;
+  border-radius: 18px;
+  background: linear-gradient(140deg, #f0eaff, #eaf3ff);
+  color: #8b6df0;
+  box-shadow: 0 8px 20px -14px rgb(124 92 214 / 55%);
 }
 strong {
   color: var(--text-primary);
+  font-size: 14px;
   font-weight: 600;
 }
 p {
   margin: 0;
-  font-size: 13px;
+  max-width: 360px;
+  font-size: 12px;
+  line-height: 1.7;
 }
 </style>

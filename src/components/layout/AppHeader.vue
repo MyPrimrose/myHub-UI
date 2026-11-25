@@ -29,9 +29,9 @@ const title = computed(() => String(route.meta.title || '工作台'))
   flex: 0 0 var(--header-height);
   align-items: center;
   justify-content: space-between;
-  padding: 0 30px;
-  background: var(--bg-sidebar);
-  border-bottom: 1px solid var(--border-color);
+  padding: 14px 34px 0;
+  background: transparent;
+  border-bottom: 0;
 }
 .page-title {
   font-size: 14px;
@@ -48,10 +48,12 @@ const title = computed(() => String(route.meta.title || '工作台'))
   align-items: center;
   gap: 8px;
   padding: 0 9px;
-  border: 1px solid var(--border-color);
-  border-radius: 8px;
+  border: 1px solid rgb(255 255 255 / 90%);
+  border-radius: 12px;
   color: var(--text-secondary);
-  background: var(--bg-primary);
+  background: rgb(255 255 255 / 64%);
+  box-shadow: 0 4px 18px -14px rgb(107 78 200 / 45%);
+  backdrop-filter: blur(12px);
   cursor: pointer;
 }
 kbd {
@@ -66,14 +68,15 @@ kbd {
   place-items: center;
   width: 32px;
   height: 32px;
-  border: 1px solid var(--border-color);
-  border-radius: 50%;
-  color: var(--text-secondary);
-  background: var(--bg-card);
+  border: 1px solid #f0ebfa;
+  border-radius: 14px;
+  color: #a27854;
+  background: linear-gradient(145deg, #fff1dc, #f9dce3);
+  box-shadow: 0 5px 16px -12px rgb(107 78 200 / 55%);
 }
 @media (max-width: 520px) {
   .header {
-    padding-inline: 14px;
+    padding-inline: 16px;
   }
   .search-button span,
   .search-button kbd {
