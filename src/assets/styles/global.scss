@@ -1,0 +1,59 @@
+@use './variables.scss';
+@use './light.scss';
+@use './dark.scss';
+
+* {
+  box-sizing: border-box;
+}
+html,
+body,
+#app {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0;
+}
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Microsoft YaHei',
+    sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  transition:
+    background-color 160ms ease,
+    color 160ms ease;
+}
+button,
+input {
+  font: inherit;
+}
+button {
+  color: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+::selection {
+  background: var(--primary-soft);
+}
+:focus-visible {
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+:root[data-theme='dark'] {
+  --el-bg-color: var(--bg-card);
+  --el-bg-color-overlay: var(--bg-card);
+  --el-text-color-primary: var(--text-primary);
+  --el-text-color-regular: var(--text-secondary);
+  --el-border-color: var(--border-color);
+  --el-border-color-light: var(--border-color);
+  --el-fill-color-blank: var(--bg-card);
+  --el-color-primary: var(--primary-color);
+}
