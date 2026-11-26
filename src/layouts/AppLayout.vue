@@ -5,7 +5,9 @@ import AppHeader from '@/components/layout/AppHeader.vue'
 import AppSidebar from '@/components/layout/AppSidebar.vue'
 
 const route = useRoute()
-const wideContent = computed(() => route.path.startsWith('/schedule'))
+const wideContent = computed(
+  () => route.path.startsWith('/schedule') || route.path.startsWith('/library'),
+)
 </script>
 
 <template>

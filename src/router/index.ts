@@ -35,7 +35,7 @@ export const router = createRouter({
         {
           path: 'library',
           name: 'library',
-          component: () => import('@/views/library/LibraryView.vue'),
+          component: () => import('@/views/library/index.vue'),
           meta: { title: '个人资料库', requiresAuth: true },
         },
         {

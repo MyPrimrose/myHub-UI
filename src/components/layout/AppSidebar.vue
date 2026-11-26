@@ -22,7 +22,7 @@ const user = useUserStore()
 const items = [
   { label: '工作台', hint: '今日概览', to: '/dashboard', icon: LayoutDashboard },
   { label: '排期表', hint: '计划与任务', to: '/schedule', icon: CalendarRange },
-  { label: '个人资料库', hint: '收藏与资料', to: '/library', icon: BookOpen },
+  { label: '个人资料库', hint: 'HTML 小站', to: '/library', icon: BookOpen },
 ]
 
 async function signOut() {
