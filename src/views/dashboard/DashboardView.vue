@@ -92,8 +92,8 @@ const recent = [
           <div><strong>2</strong><span>今天到期</span></div>
           <div><strong>1</strong><span>已完成</span></div>
         </div>
-        <RouterLink to="/todos" class="text-link"
-          >查看任务中心 <ArrowRight :size="15"
+        <RouterLink to="/schedule" class="text-link"
+          >查看排期表 <ArrowRight :size="15"
         /></RouterLink>
       </AppCard>
     </section>
@@ -105,7 +105,7 @@ const recent = [
             <span class="eyebrow muted">今天的节奏</span>
             <h2>计划时间轴</h2>
           </div>
-          <RouterLink to="/plans" class="text-link">全部计划 <ArrowRight :size="15" /></RouterLink>
+          <RouterLink to="/schedule" class="text-link">打开排期表 <ArrowRight :size="15" /></RouterLink>
         </div>
         <div class="timeline">
           <div v-for="(plan, index) in plans" :key="plan.time" class="timeline-row">
@@ -131,9 +131,9 @@ const recent = [
             </div>
             <ArrowUpRight :size="17" class="subtle-icon" />
           </div>
-          <RouterLink to="/plans" class="shortcut-row"
+          <RouterLink to="/schedule" class="shortcut-row"
             ><span class="shortcut-icon blue"><CalendarDays :size="17" /></span
-            ><span><strong>新建计划</strong><small>安排接下来的一步</small></span
+            ><span><strong>打开排期表</strong><small>安排计划与任务</small></span
             ><ArrowRight :size="15"
           /></RouterLink>
           <RouterLink to="/library" class="shortcut-row"

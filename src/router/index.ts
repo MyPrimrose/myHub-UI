@@ -17,16 +17,20 @@ export const router = createRouter({
           meta: { title: '工作台', requiresAuth: true },
         },
         {
+          path: 'schedule',
+          name: 'schedule',
+          component: () => import('@/views/schedule/index.vue'),
+          meta: { title: '排期表', requiresAuth: true },
+        },
+        {
           path: 'plans',
           name: 'plans',
-          component: () => import('@/views/plans/PlansView.vue'),
-          meta: { title: '计划中心', requiresAuth: true },
+          redirect: '/schedule',
         },
         {
           path: 'todos',
           name: 'todos',
-          component: () => import('@/views/todos/TodosView.vue'),
-          meta: { title: '任务中心', requiresAuth: true },
+          redirect: '/schedule',
         },
         {
           path: 'library',

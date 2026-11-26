@@ -4,8 +4,7 @@ import { useRoute, RouterLink } from 'vue-router'
 import {
   Activity,
   BookOpen,
-  CalendarDays,
-  CheckSquare2,
+  CalendarRange,
   ChevronLeft,
   ChevronRight,
   LayoutDashboard,
@@ -22,8 +21,7 @@ const router = useRouter()
 const user = useUserStore()
 const items = [
   { label: '工作台', hint: '今日概览', to: '/dashboard', icon: LayoutDashboard },
-  { label: '计划中心', hint: '时间安排', to: '/plans', icon: CalendarDays },
-  { label: '任务中心', hint: '下一步行动', to: '/todos', icon: CheckSquare2 },
+  { label: '排期表', hint: '计划与任务', to: '/schedule', icon: CalendarRange },
   { label: '个人资料库', hint: '收藏与资料', to: '/library', icon: BookOpen },
 ]
 
@@ -65,7 +63,7 @@ async function signOut() {
     <section v-if="!collapsed" class="space-card">
       <span class="space-kicker">MY HUB</span>
       <strong>把重要的事放在眼前</strong>
-      <p>计划、任务与资料，在这里慢慢整理。</p>
+      <p>排期、资料与日常，在这里慢慢整理。</p>
     </section>
     <div class="sidebar-bottom">
       <RouterLink

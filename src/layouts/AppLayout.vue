@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { RouterView } from 'vue-router'
+import { computed } from 'vue'
+import { RouterView, useRoute } from 'vue-router'
 import AppHeader from '@/components/layout/AppHeader.vue'
 import AppSidebar from '@/components/layout/AppSidebar.vue'
+
+const route = useRoute()
+const wideContent = computed(() => route.path.startsWith('/schedule'))
 </script>
 
 <template>
@@ -9,7 +13,7 @@ import AppSidebar from '@/components/layout/AppSidebar.vue'
     <AppSidebar />
     <div class="main-column">
       <AppHeader />
-      <main class="main-content"><RouterView /></main>
+      <main class="main-content" :class="{ wide: wideContent }"><RouterView /></main>
     </div>
   </div>
 </template>
@@ -43,6 +47,9 @@ import AppSidebar from '@/components/layout/AppSidebar.vue'
   overscroll-behavior-y: contain;
   scrollbar-gutter: stable;
   padding: 24px 34px 48px;
+}
+.main-content.wide {
+  max-width: none;
 }
 @media (max-width: 700px) {
   .main-content {
